@@ -17,7 +17,7 @@ export const Header = () => {
 
     return (
         <div className="fixed w-full">
-            <div className="p-4 px-6 bg-white bg-opacity-80 backdrop-blur-sm  flex justify-between items-center border ">
+            <div className="p-4 px-6 bg-white bg-opacity-90 backdrop-blur-sm  flex justify-between items-center border ">
                 <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={1024} height={1024} className="w-[60px] h-[60px] " />
                 <div className="hidden md:flex">
                     {headContets.map((item, index) => {
