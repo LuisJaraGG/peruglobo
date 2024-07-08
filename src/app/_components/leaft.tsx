@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export const Leaft = ({ isOpen }: any) => {
   const [isVisible, setIsVisible] = useState(isOpen);
   const [rotations, setRotations] = useState<{ [key: string]: boolean }>({});
+  const pathname = usePathname(); // Mueve la llamada a usePathname aquí
 
   useEffect(() => {
     let timeoutId: any;
@@ -18,9 +19,8 @@ export const Leaft = ({ isOpen }: any) => {
     return () => clearTimeout(timeoutId);
   }, [isOpen]);
 
-  const isActive = (path: string) => {
-    const actualPath = usePathname();
-    return actualPath === path ? 'isActive' : ' hover:bg-[#62C7F1] hover:text-white';
+  const isActive = (path: string, currentPath: string) => {
+    return currentPath === path ? 'isActive' : ' hover:bg-[#62C7F1] hover:text-white';
   };
 
   const handleIconClick = (index: any) => {
@@ -47,7 +47,7 @@ export const Leaft = ({ isOpen }: any) => {
                   {item.suburls ? (
                     <>
                       <div
-                        className={`text-lg cursor-pointer flex space-x-3 min-h-12 hover:pl-6 items-center px-4 transition-all duration-200  ${isActive(item.url)}`}
+                        className={`text-lg cursor-pointer flex space-x-3 min-h-12 hover:pl-6 items-center px-4 transition-all duration-200  ${isActive(item.url, pathname)}`}
                         onClick={() => handleIconClick(index)}
                       >
 
@@ -67,7 +67,7 @@ export const Leaft = ({ isOpen }: any) => {
                         }`}
                       >
                         {item.suburls.map((suburl, subIndex) => (
-                          <li key={subIndex} className={`pl-8 h-[34px] flex items-center ${isActive(suburl.url)}`}>
+                          <li key={subIndex} className={`pl-8 h-[34px] flex items-center ${isActive(suburl.url, pathname)}`}>
                             <Icons.ChevronRight size={15} />
                             <a
                               className="hover:ml-2 transition-all duration-200 "
@@ -81,7 +81,7 @@ export const Leaft = ({ isOpen }: any) => {
                     </>
                   ) : (
                     <div
-                      className={`text-lg cursor-pointer flex justify-between min-h-12 items-center px-4  ${isActive(item.url)}`}
+                      className={`text-lg cursor-pointer flex justify-between min-h-12 items-center px-4  ${isActive(item.url, pathname)}`}
                     >
                       <a
                         href={item.url}
