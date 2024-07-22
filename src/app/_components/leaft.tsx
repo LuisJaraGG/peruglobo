@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export const Leaft = ({ isOpen }: any) => {
   const [isVisible, setIsVisible] = useState(isOpen);
   const [rotations, setRotations] = useState<{ [key: string]: boolean }>({});
-  const pathname = usePathname(); // Mueve la llamada a usePathname aquí
+  const pathname = usePathname(); 
 
   useEffect(() => {
     let timeoutId: any;
@@ -20,7 +20,7 @@ export const Leaft = ({ isOpen }: any) => {
   }, [isOpen]);
 
   const isActive = (path: string, currentPath: string) => {
-    return currentPath === path ? 'isActive' : ' hover:bg-[#62C7F1] hover:text-white';
+    return currentPath === path ? 'isActive' : ' hover:bg-[#FE9CDB] hover:text-white';
   };
 
   const handleIconClick = (index: any) => {
@@ -34,7 +34,7 @@ export const Leaft = ({ isOpen }: any) => {
     isVisible && (
       <main className={`md:hidden bg-black bg-opacity-30 backdrop-blur-sm  transition-all duration-200 ${isOpen ? "fade-in" : "fade-out"}`}>
         <div
-          className={`bg-white backdrop-blur-sm w-[70%] ml-auto h-screen text-[#62C7F1] border shadow ${
+          className={`bg-white backdrop-blur-sm w-[70%] ml-auto h-screen text-[#FE9CDB] border shadow ${
             isOpen ? "slide-in-right block" : "slide-out-right"
           }`}
         >

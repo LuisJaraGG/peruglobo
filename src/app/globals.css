@@ -45,12 +45,12 @@ html {
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease-in forwards;
+  animation: fadeIn 0.3s ease-in forwards;
 }
 
 
 .fade-out {
-  animation: fadeOut 0.5s ease-out forwards;
+  animation: fadeOut 0.3s ease-out forwards;
 }
 
 .icon-transition {
@@ -70,19 +70,19 @@ html {
 
 /* Clase para aplicar la animación de rotar hacia abajo */
 .rotate-down {
-  animation: rotateDown 0.2s forwards;
+  animation: rotateDown 0.1s forwards;
 }
 
 /* Clase para aplicar la animación de rotar hacia arriba */
 .rotate-up {
-  animation: rotateUp 0.2s forwards;
+  animation: rotateUp 0.1s forwards;
 }
 
 /* Estilo base para los sublinks */
 .sublinks {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out 0.1s;
+  transition: max-height 0.1s ease-out 0.1s;
 }
 
 /* Estilo cuando los sublinks están visibles */
@@ -96,7 +96,7 @@ html {
 
 
 .isActive {
-  background-color: #62C7F1;
+  background-color: #FE9CDB;
   color: white;
 }
 
@@ -163,3 +163,20 @@ html {
   }
 }
 
+/* styles/fonts.css */
+@font-face {
+  font-family: 'Shabby Patty';
+  src: url('/fonts/ShabbyPatty-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.shabby-patty {
+  font-family: 'Shabby Patty', sans-serif;
+}
+.underline-custom {
+  text-decoration: underline;
+  text-decoration-color: #fff; /* Color del subrayado */
+  text-decoration-thickness: 3px; /* Grosor del subrayado */
+  text-underline-offset: 4px; /* Desplazamiento del subrayado */
+}
