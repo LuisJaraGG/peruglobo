@@ -29,7 +29,7 @@ export const Header = () => {
     const handleMouseLeave = () => {
         closeTimeout.current = setTimeout(() => {
             setOpenSub(null);
-        }, 200);
+        }, 300);
     };
 
     const isActive = (path: string, currentPath: string) => {
@@ -38,9 +38,9 @@ export const Header = () => {
 
     return (
         <div className="fixed w-full" style={{ zIndex: 999 }}>
-            <div className="p-1 px-6 bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB] bg-opacity-85 backdrop-blur-sm flex justify-between items-center">
+            <div className="p-1 px-6 bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB]  shadow-lg bg-opacity-85 backdrop-blur-sm flex justify-between items-center">
                 <Link href={"/"}>
-                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={1024} height={1024} className="w-[80px] h-[65px]" />
+                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[70px] h-[65px] py-2" />
                 </Link>
                 <div className="hidden md:flex">
                     {headContets.map((item, index) => {
@@ -49,16 +49,16 @@ export const Header = () => {
                         return (
                             <div
                                 key={index}
-                                className={`text-sm cursor-pointer flex space-x-5 min-h-12 items-center px-5 transition-all duration-200 flex-col text-white ${isActive(item.url, pathname)}`}
+                                className={`text-sm cursor-pointer flex space-x-5 h-[65px]  items-center px-5 transition-all duration-500 flex-col text-white ${isActive(item.url, pathname)}`}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Link href={item.url} className="flex flex-col justify-center items-center text-center ">
+                                <Link href={item.url} className="flex flex-col justify-center items-center text-center my-auto">
                                 <IconComponent size={20} className="my-auto" />
                                 <p className="">{item.title}</p>
                                 </Link>
                                 <ul
-                                    className={`fixed mt-[72px] rounded-b-lg bg-[#FE9CDB] bg-opacity-95 backdrop-blur-sm ${openSub === index ? "block" : "hidden"}`}
+                                    className={`fixed mt-[69px] rounded-b-lg bg-[#FE9CDB] bg-opacity-95 backdrop-blur-sm ${openSub === index ? "block" : "hidden"}`}
                                     onMouseEnter={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
                                 >

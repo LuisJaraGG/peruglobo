@@ -20,3 +20,15 @@ export const indexImages = [
         url: "/alquiler?sort=camas"
     }
 ]
+
+export const eventsImages = [
+    {
+        image: "/events/1.jpeg",
+    },
+    {
+        image: "/events/2.jpeg",
+    },
+    {
+        image: "/events/3.jpeg",
+    }
+]

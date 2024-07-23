@@ -9,8 +9,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
+type Props = {
+  images: any;
+  linkeable: boolean;
+  arrowsColor?: string;
+  paginationColor?: string;
+  imageStyle?: string
+  imagesPerPage?: number
+  spaceBetween?: number
+};
 
-const Carousel = ({images}:any) => {
+const Carousel = ({images,arrowsColor = '#fff',paginationColor = '#fff',linkeable=false,imageStyle='w-[300px] h-auto',imagesPerPage=2,spaceBetween=50}:Props) => {
   return (
     <div className="w-full">
     <Swiper
@@ -20,20 +29,39 @@ const Carousel = ({images}:any) => {
         delay: 2500,
         disableOnInteraction: false
       }}
-      spaceBetween={50}
-      slidesPerView={2}
+      style={{
+        // @ts-ignore
+        '--swiper-navigation-color': arrowsColor,
+        '--swiper-pagination-color': paginationColor,
+        '--swiper-navigation-size': '30px',
+      }}
+      breakpoints={{
+        768: {
+          slidesPerView: imagesPerPage,
+        }
+      }}
+      spaceBetween={spaceBetween}
+      slidesPerView={1}
       navigation
-      pagination={{ clickable: true }}
+      loop
+      pagination={{ clickable: true,dynamicBullets:true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
         {images.map((image:any, index:any) => (
           <SwiperSlide key={index} className='mb-9'>
-            <Link href={image.url} className='flex flex-col items-center justify-center'>
-                <img src={image.image} alt={`Slide ${index}`} className="w-[300px] h-auto" />
-                {image.title? <p className="text-white text-3xl font-bold">{image.title}</p> : null}
-            </Link>
+            {linkeable ? (
+                <Link href={image.url} className='flex flex-col items-center justify-center'>
+                    <img src={image.image} alt={`Slide ${index}`} className={imageStyle} />
+                    {image.title? <p className="text-white text-3xl font-bold">{image.title}</p> : null}
+                </Link>
+            ) : (
+              <div  className='flex flex-col items-center justify-center w-full h-[400px]'>
+              <img src={image.image} alt={`Slide ${index}`} className={imageStyle} />
+              {image.title? <p className="text-white text-3xl font-bold">{image.title}</p> : null}
+              </div>
+            )}
 
           </SwiperSlide>
         ))}

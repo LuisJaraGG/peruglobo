@@ -180,3 +180,9 @@ html {
   text-decoration-thickness: 3px; /* Grosor del subrayado */
   text-underline-offset: 4px; /* Desplazamiento del subrayado */
 }
+.underline-custom-blue {
+  text-decoration: underline;
+  text-decoration-color: #2EDEF9; /* Color del subrayado */
+  text-decoration-thickness: 3px; /* Grosor del subrayado */
+  text-underline-offset: 4px; /* Desplazamiento del subrayado */
+}
