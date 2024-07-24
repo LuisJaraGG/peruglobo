@@ -186,3 +186,7 @@ html {
   text-decoration-thickness: 3px; /* Grosor del subrayado */
   text-underline-offset: 4px; /* Desplazamiento del subrayado */
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}

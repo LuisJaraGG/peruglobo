@@ -18,8 +18,8 @@ export default function Home() {
   // }, [router]);
   
   return (
-    <main >
-      <div className="w-screen h-screen">
+    <main className="overflow-y-hidden" >
+      <div className=" h-screen">
       <Image width={1792} height={1024}  src="/inicio.png" alt="banner" className="h-screen w-full object-cover" />
       </div>
 
