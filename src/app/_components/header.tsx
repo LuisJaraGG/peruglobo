@@ -39,7 +39,10 @@ export const Header = () => {
     return (
         <div className="fixed w-full" style={{ zIndex: 999 }}>
             <div className="p-1 px-6 bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB]  shadow-lg bg-opacity-85 backdrop-blur-sm flex justify-between items-center">
-                <Link href={"/"}>
+                <Link href={"/"}
+                onClick={() => setOpen(false)}
+
+                >
                     <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[70px] h-[65px] py-2" />
                 </Link>
                 <div className="hidden md:flex">
@@ -87,7 +90,7 @@ export const Header = () => {
                     />
                 </div>
             </div>
-            <Leaft isOpen={open} />
+            <Leaft isOpen={open} setOpen={setOpen} />
         </div>
     );
 };

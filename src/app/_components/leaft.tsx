@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import { headContets } from "../data/head";
 import * as Icons from "lucide-react"; // Importamos todos los íconos como un objeto
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-export const Leaft = ({ isOpen }: any) => {
+export const Leaft = ({ isOpen,setOpen }: any) => {
   const [isVisible, setIsVisible] = useState(isOpen);
   const [rotations, setRotations] = useState<{ [key: string]: boolean }>({});
   const pathname = usePathname(); 
@@ -69,12 +70,13 @@ export const Leaft = ({ isOpen }: any) => {
                         {item.suburls.map((suburl, subIndex) => (
                           <li key={subIndex} className={`pl-8 h-[34px] flex items-center ${isActive(suburl.url, pathname)}`}>
                             <Icons.ChevronRight size={15} />
-                            <a
+                            <Link
                               className="hover:ml-2 transition-all duration-200 "
                               href={suburl.url}
+                              onClick={() => setOpen(false)}
                             >
                               {suburl.title}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -90,9 +92,14 @@ export const Leaft = ({ isOpen }: any) => {
                         {IconComponent && (
                         <IconComponent size={20} className="my-auto " />
                         )}
+                        <Link href={item.url}
+                        onClick={() => setOpen(false)}
+
+                        >
                         <p className="ml-3">
                         {item.title}                       
                         </p>
+                        </Link>
 
                       </a>
 
