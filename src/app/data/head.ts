@@ -12,23 +12,23 @@ export const headContets = [
         suburls:[
             {
                 title: "Juegos inflables",
-                url: "/alquiler?sort=inflables"
+                url: "/alquiler?sort=inflables#productos"
             },
             {
                 title: "Juegos acuáticos",
-                url: "/alquiler?sort=acuaticos"
+                url: "/alquiler?sort=acuaticos#productos"
             },
             {
                 title: "Juegos mecanicos",
-                url: "/alquiler?sort=mecanicos"
+                url: "/alquiler?sort=mecanicos#productos"
             },
             {
                 title: "Cama saltarina",
-                url: "/alquiler?sort=camas"
+                url: "/alquiler?sort=camas#productos"
             },
             {
                 title: "Otros",
-                url: "/alquiler?sort=otros"
+                url: "/alquiler?sort=otros#productos"
             }
         ]
     },

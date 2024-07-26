@@ -13,7 +13,7 @@ export function ContactoFooter() {
                   className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: 'url("/patron1.png")', opacity: 0.5 }}
               ></div>
-              <div className="relative z-10 text-center px-3 md:p-0 max-w-[700px] mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-center text-white md:gap-10">
+              <div className="relative z-10 text-center px-3 md:p-0 max-w-[700px] lg:max-w-[1200px] mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-center text-white md:gap-10">
                   <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76} className="w-[136px] md:my-auto" />
                   <div className="hidden md:flex border-l-4 border-white h-[400px]"></div>
                   <div>
@@ -27,7 +27,8 @@ export function ContactoFooter() {
 
                         <div className="flex flex-col items-center justify-center">
                             <Mail size={32}/>
-                            <p>Av. Los Incas J -10 Urb. Pablo VI - Cercado Arequipa - Peru</p>
+                            <p>Av. Los Incas J -10 Urb. Pablo VI </p>
+                            <p>Cercado Arequipa - Peru</p>
                         </div>
 
                         <div className="flex flex-col items-center justify-center">

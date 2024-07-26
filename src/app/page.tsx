@@ -35,7 +35,7 @@ export default function Home() {
                   <Carousel arrowsColor="#88E2FE" paginationColor="#88E2FE" spaceBetween={10} images={eventsImages} linkeable={false} imageStyle=" object-cover rounded-xl shadow w-[80%] h-[300px] hover:w-[100%] hover:h-[100%] transition-all duration-300 " />
                   <div className="flex gap-10 items-center justify-center mt-5">
                       <button className="p-2 bg-[#FFCC00] text-white rounded-md text-lg">
-                        <Link href="/alquiler" >Alquiler</Link>
+                        <Link href="/alquiler#productos" >Alquiler</Link>
                       </button>
                       <button className="p-2 bg-[#FFCC00] text-white rounded-md text-lg">
                       <Link href="/ventas" >Venta</Link>

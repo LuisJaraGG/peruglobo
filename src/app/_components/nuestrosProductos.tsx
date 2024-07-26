@@ -18,7 +18,7 @@ export function NuestrosProductos() {
                   </div>
                   <div className="flex gap-10 items-center justify-center mt-5">
                     <button className="p-2 bg-[#FE9CDB] text-white rounded-md text-lg">
-                      <Link href="/alquiler" >Alquiler</Link>
+                      <Link href="/alquiler#productos" >Alquiler</Link>
                     </button>
                     <button className="p-2 bg-[#FE9CDB] text-white rounded-md text-lg">
                     <Link href="/ventas" >Venta</Link>
