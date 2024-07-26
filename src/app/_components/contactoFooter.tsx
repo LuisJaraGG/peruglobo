@@ -46,7 +46,7 @@ export function ContactoFooter() {
                   <div >
                     <p className="shabby-patty text-white text-5xl   underline-custom mt-14 md:m-0">Siguenos</p>
                     <div className="flex flex-col gap-8 mt-5 items-center justify-center font-semibold">
-                        <Link href={'https://wa.me/51959101294?text=Hola estoy interesado en adquirir un producto'} target="_blank">
+                        <Link href={'https://wa.me/51959101294?text=Hola estoy interesado en adquirir un producto de peru globo'} target="_blank">
                             <FaWhatsapp size={40}/>
                         </Link>
                         <Link href={'https://www.facebook.com/peruglobo'} target="_blank">
