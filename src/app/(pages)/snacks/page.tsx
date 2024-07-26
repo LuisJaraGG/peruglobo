@@ -11,7 +11,7 @@ export default function Snack() {
     <main className="overflow-hidden">
         {/* Seccion del fondo */}
         <div className=" h-screen relative">
-          <Image width={996} height={664}  src="/bg/snack.jpeg" alt="background de nosotros" className="h-screen w-full  object-cover" />
+          <Image width={996} height={664}  src="/bg/snack.jpeg" alt="background de Snacks" className="h-screen w-full  object-cover" />
           <div className="absolute top-0 left-0 w-full h-full bg-[#888888] bg-opacity-45"></div>
           <div className="absolute max-w-[400px]   bottom-0  max-[600px]:left-0
           max-[600px]:right-0 max-[600px]:mx-auto max-[600px]:top-0 py-auto flex
