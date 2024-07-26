@@ -341,3 +341,28 @@ export const imagesProducts:{
         title: "Bosque"
     },
 ]
+
+
+export const imagesSnacks = [
+    {
+        image: "/snacks/1.jpeg",
+        title: "Manzanas Acarameladas",
+        description: "Manzanas Acarameladas"
+    },
+    {
+        image: "/snacks/2.jpeg",
+        title: "Algodón dulce",
+        description: "Carrito de algodón dulce"
+    },
+    {
+        image: "/snacks/3.jpeg",
+        title: "Pop Corn - Canchita",
+        description: "Carrito de PopCorn"
+    },
+    {
+        image: "/snacks/4.jpeg",
+        title: "Queso Helado",
+        description: "Carrito de Queso Helado"
+    }
+
+]
