@@ -33,9 +33,10 @@ export const Leaft = ({ isOpen,setOpen }: any) => {
 
   return (
     isVisible && (
-      <main className={`md:hidden bg-black bg-opacity-30 backdrop-blur-sm  transition-all duration-200 ${isOpen ? "fade-in" : "fade-out"}`}>
+      <main className={`relative md:hidden `}>
+        <div onClick={() => setOpen(false)} className={`absolute bg-black bg-opacity-30 backdrop-blur-sm  top-0 transition-all duration-200 w-full h-screen z-10 ${isOpen ? "fade-in" : "fade-out"}`}></div>
         <div
-          className={`bg-white backdrop-blur-sm w-[70%] ml-auto h-screen text-[#FE9CDB] border shadow ${
+          className={`absolute right-0 bg-white backdrop-blur-sm w-[70%] ml-auto h-screen text-[#FE9CDB] border shadow z-20 ${
             isOpen ? "slide-in-right block" : "slide-out-right"
           }`}
         >
@@ -82,28 +83,22 @@ export const Leaft = ({ isOpen,setOpen }: any) => {
                       </ul>
                     </>
                   ) : (
-                    <div
+                    <Link href={item.url}
                       className={`text-lg cursor-pointer flex justify-between min-h-12 items-center px-4  ${isActive(item.url, pathname)}`}
+                      onClick={() => setOpen(false)}
                     >
-                      <a
-                        href={item.url}
+                      <div
                         className="hover:ml-2  flex transition-all duration-200  "
                       >
                         {IconComponent && (
                         <IconComponent size={20} className="my-auto " />
                         )}
-                        <Link href={item.url}
-                        onClick={() => setOpen(false)}
-
-                        >
                         <p className="ml-3">
                         {item.title}                       
                         </p>
-                        </Link>
+                      </div>
 
-                      </a>
-
-                    </div>
+                    </Link>
                   )}
                 </li>
               );

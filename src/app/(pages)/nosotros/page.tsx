@@ -22,8 +22,10 @@ export default function Nosotros() {
       </div>
 
       {/* Seccion 2 */}
-      <div className="py-28 " style={{ backgroundImage: 'url("/patron3.png")', backgroundSize: 'cover' }}>
-        <div className="max-w-[900px] mx-auto flex flex-col gap-16">
+      <div className="py-28 relative" >
+      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-60 " style={{ backgroundImage: 'url("/patron3.png")' }}></div>
+
+        <div className="relative max-w-[900px] mx-auto flex flex-col gap-16">
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-0  ">
             <Image width={7000} height={7000}  src="/child1.png" alt="texto de seccion nosotro" className="w-1/2 -mt-28 md:m-0"></Image>
             <div className="w-1/2 flex gap-5 flex-col justify-center items-center text-center">
@@ -34,12 +36,12 @@ export default function Nosotros() {
           </div>
           <div className="flex flex-col  justify-center items-center gap-5">
             <div className="flex flex-col md:flex-row items-center md:items-start text-center gap-10 px-5">
-              <div className=" w-1/2">
+              <div className=" md:w-1/2">
                   <Image width={512} height={512}  src="/mision.png" alt="logo mision" className="w-[80px] mx-auto"></Image>
                   <h2 className=" shabby-patty text-[#FCC73F] text-7xl text-shadow">Mision</h2>
                   <p className="text-lg">Llevar entretenimiento a los niños buscando que desarrollen habilidades motrices, sociales e intelectuales mediante los juegos tomando como prioridad la seguridad.</p>
               </div>
-              <div className=" w-1/2">
+              <div className=" md:w-1/2">
               <Image width={512} height={512}  src="/vision.png" alt="logo mision" className="w-[80px] mx-auto"></Image>
 
                   <h2 className=" shabby-patty text-[#FCC73F] text-7xl text-shadow">Vision</h2>

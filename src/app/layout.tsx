@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "PruGlobo",
   description: "Distribuidora de juego inflables",
   icons: {
-    icon: "/peru-globo-logo.png",
+    icon: "peru-globo-logo.png",
   }
 };
 
@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon/png" href="/peru-globo-logo.png" />
+      </head>
       <body className={inter.className} suppressHydrationWarning >
         <Header />
         <main >

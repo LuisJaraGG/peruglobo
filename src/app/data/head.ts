@@ -49,11 +49,11 @@ export const headContets = [
         suburls:[
             {
                 title: "Juegos inflables",
-                url: "/ventas?sort=inflables"
+                url: "/ventas?sort=inflables#productos"
             },
             {
                 title: "Otros",
-                url: "/ventas?sort=otros"
+                url: "/ventas?sort=otros#productos"
             }
         ]
     },

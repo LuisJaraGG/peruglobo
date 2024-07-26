@@ -43,7 +43,7 @@ export const Header = () => {
                 onClick={() => setOpen(false)}
 
                 >
-                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[70px] h-[65px] py-2" />
+                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[110px] h-[85px] py-2" />
                 </Link>
                 <div className="hidden md:flex">
                     {headContets.map((item, index) => {
