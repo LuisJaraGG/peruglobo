@@ -1,5 +1,6 @@
 
 'use client'
+import { ContactoFooter } from "@/app/_components/contactoFooter"
 import { useTitle } from "@/app/hooks/changeTittle"
 import Image from "next/image"
 
@@ -18,7 +19,7 @@ export default function Contactos() {
 
         
         {/* Seccion de contactos */}
-        <div className=" bg-gradient-to-r from-[#97DFE6] to-[#2EDEF9] ">
+        {/* <div className=" bg-gradient-to-r from-[#97DFE6] to-[#2EDEF9] ">
           <div className="relative w-screen min-h-screen py-28">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -28,7 +29,9 @@ export default function Contactos() {
                     <p className="shabby-patty text-white text-5xl  md:text-7xl  underline-custom">Formulario</p>
                 </div>
             </div>
-        </div>
+        </div> */}
+              {/* Seccion 4 */}
+      <ContactoFooter/>
     </main>
   )
 }
