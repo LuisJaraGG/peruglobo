@@ -35,15 +35,19 @@ export const Header = () => {
     const isActive = (path: string, currentPath: string) => {
         return currentPath === path ? 'border-b' : ' hover:border-b';
       };
+    
+      const isAdmin = () => {
+        return pathname === "/admin" ? true : false;
+      };
 
     return (
-        <div className="fixed w-full" style={{ zIndex: 999 }}>
+        <div className={`fixed w-full ${isAdmin() ? 'hidden' : ''}`} style={{ zIndex: 999 }}>
             <div className="p-1 px-6 bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB]  shadow-lg bg-opacity-85 backdrop-blur-sm flex justify-between items-center">
                 <Link href={"/"}
                 onClick={() => setOpen(false)}
 
                 >
-                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[110px] h-[85px] py-2" />
+                    <Image src="/peru-globo-logo.png" alt="logo-peru-globo" width={136} height={76}  className="w-[70px] h-[65px]  py-2" />
                 </Link>
                 <div className="hidden md:flex">
                     {headContets.map((item, index) => {

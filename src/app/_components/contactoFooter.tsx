@@ -7,8 +7,8 @@ import { FaWhatsapp,FaFacebook,FaInstagram } from "react-icons/fa";
 
 export function ContactoFooter() {
     return (
-        <div className="w-screen  bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB] ">
-        <div className="relative w-screen h-full py-28">
+        <div className=" bg-gradient-to-r from-[#FFCCED] to-[#FE9CDB] ">
+        <div className="relative  h-full py-28">
               <div
                   className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: 'url("/patron1.png")', opacity: 0.5 }}
