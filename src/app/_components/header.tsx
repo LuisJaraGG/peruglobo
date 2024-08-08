@@ -37,7 +37,7 @@ export const Header = () => {
       };
     
       const isAdmin = () => {
-        return pathname === "/admin" ? true : false;
+        return pathname.startsWith("/admin") || pathname.startsWith("/login") ? true : false;
       };
 
     return (
