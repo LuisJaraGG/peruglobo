@@ -5,8 +5,8 @@ import { indexImages } from "../data/images";
 import Carousel from "./carousel";
 export function NuestrosProductos() {
     return (
-        <div className="w-screen  bg-gradient-to-r from-[#97DFE6] to-[#2EDEF9] ">
-        <div className="relative w-screen h-full py-28">
+        <div className="  bg-gradient-to-r from-[#97DFE6] to-[#2EDEF9] ">
+        <div className="relative  h-full py-28">
               <div
                   className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: 'url("/patron1.png")', opacity: 0.5 }}

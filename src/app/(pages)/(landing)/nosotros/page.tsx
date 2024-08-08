@@ -14,7 +14,7 @@ export default function Nosotros() {
         <div className="absolute top-0 left-0 w-full h-full bg-[#888888] bg-opacity-45"></div>
         <div className="absolute max-w-[400px]   bottom-0  max-[600px]:left-0
         max-[600px]:right-0 max-[600px]:mx-auto max-[600px]:top-0 py-auto flex
-          items-center justify-center min-[600px]:bottom-16  xs:right-16
+          items-center justify-center min-[600px]:bottom-16  right-16 
            px-5 md:p-0">
         <Image width={1946} height={1122}  src="/text/quienesSomos.png" alt="texto de seccion nosotro" className=" object-scale-down"></Image>
         </div>

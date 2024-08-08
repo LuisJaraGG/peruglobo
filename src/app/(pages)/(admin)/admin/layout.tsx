@@ -1,6 +1,6 @@
 'use client'
 import { Inter } from "next/font/google";
-
+import Sidebar from "./_components/sidebar";
 const inter = Inter({ subsets: ["latin"] });
 import { Toaster } from 'react-hot-toast';
 export default function AdminLayout({
@@ -11,8 +11,7 @@ export default function AdminLayout({
     return (
       <>
         <main suppressHydrationWarning className="bg-slate-800 min-h-screen">
-        <Toaster />
-        {children}
+        <Sidebar children={children} />
         </main>
       </>
     );

@@ -2,19 +2,20 @@
 import React, { useState } from "react";
 import { showAlert } from "@/app/util/alerts";
 import { useRouter } from "next/navigation";
+import { Toaster } from "react-hot-toast";
+import Cookies from 'js-cookie';
 
 export default function Logink() {
-    
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();
-  
+
     const handleSubmit = (e:React.FormEvent) => {
       e.preventDefault();
       // Aquí puedes manejar la lógica de autenticación
       console.log('Form submitted');
-      router.push('/admin/dashboard');
-      
+
       console.log('Username:', username);
       console.log('Password:', password);
       if (!username || !password || username === '' || password === '' || username.length < 3 || password.length < 3 ) {
@@ -22,9 +23,13 @@ export default function Logink() {
         return
       }
       showAlert(1,'Campos correctos');
+      Cookies.set('token', username);
+      router.push('/admin/dashboard');
+
 
     };
     return (
+      <>
         <div className="bg-slate-800 flex items-center justify-center min-h-screen ">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
           <h2 className="text-2xl font-bold text-center">Iniciar Sesion</h2>
@@ -64,5 +69,6 @@ export default function Logink() {
           </form>
         </div>
       </div>
+      </>
     );
 }

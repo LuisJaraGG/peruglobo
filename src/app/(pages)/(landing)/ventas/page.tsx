@@ -23,7 +23,7 @@ export default function Ventas() {
           <div className="h-screen relative">
             <Image width={913} height={571} src="/bg/alquiler.jpg" alt="background de nosotros" className="h-screen w-full object-cover" />
             <div className="absolute top-0 left-0 w-full h-full bg-[#888888] bg-opacity-45"></div>
-            <div className="text-center absolute max-w-[500px] bottom-0 max-[600px]:left-0 max-[600px]:right-0 max-[600px]:mx-auto max-[600px]:top-0 py-auto flex items-center justify-center min-[600px]:bottom-16 xs:left-16 px-5 md:p-0">
+            <div className="text-center absolute max-w-[500px] bottom-0 max-[600px]:left-0 max-[600px]:right-0 max-[600px]:mx-auto max-[600px]:top-0 py-auto flex items-center justify-center min-[600px]:bottom-16 left-16 px-5 md:p-0">
               <div className="flex flex-col gap-5">
                 <Image width={1946} height={1122} src="/text/nuestrosJuegos.png" alt="texto de Nuestros Juegos" className="object-scale-down"></Image>
                 <Link href={getActualPath()}>
